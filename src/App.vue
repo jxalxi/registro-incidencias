@@ -15,10 +15,12 @@
           <h4>Jhon Doe</h4>
         </div>
         <vs-sidebar-group title="Aplication" open="open">
-          <vs-sidebar-item index="1" icon="question_answer" to="home">Dashboard</vs-sidebar-item>
-          <vs-sidebar-group title="Incidencias">
-            <vs-sidebar-item index="2.1" icon="store" to="registro">Registro</vs-sidebar-item>
-            <vs-sidebar-item index="2.2" icon="nature_people">Historial</vs-sidebar-item>
+          <vs-sidebar-item index="1" :to="{ name: 'home'}">
+            <vs-avatar :badge="badge1" text="N"/> Notificaciones
+          </vs-sidebar-item>
+          <vs-sidebar-group title="Incidencias" open="open">
+            <vs-sidebar-item index="2.1" icon="store" :to="{ name: 'registro'}">Registro</vs-sidebar-item>
+            <vs-sidebar-item index="2.2" icon="nature_people" :to="{ name: 'historial'}">Historial</vs-sidebar-item>
           </vs-sidebar-group>
           <vs-sidebar-item index="3" icon="help">FAQS</vs-sidebar-item>
         </vs-sidebar-group>
@@ -49,6 +51,7 @@ import { Vue, Component, Watch } from "vue-property-decorator";
 export default class App extends Vue {
   active = true;
   open = true;
+  badge1 = 2;
 }
 </script>
 
@@ -63,6 +66,7 @@ body {
 .main-view {
   margin-left: 20rem;
   margin-top: 2rem;
+  margin-right: 4rem;
 }
 
 .header-sidebar {
@@ -95,5 +99,12 @@ h4 {
     border-left: 1px solid rgba(0, 0, 0, 0.07) !important;
     border-radius: 0px !important;
   }
+}
+
+.con-vs-avatar {
+  margin: 0 !important;
+      height: 20px;
+    width: 20px;
+    font-size: 12px;
 }
 </style>

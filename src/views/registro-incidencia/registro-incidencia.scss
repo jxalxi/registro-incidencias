@@ -1,0 +1,41 @@
+.selectExample {
+    margin: 10px;
+  }
+  .con-select-example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .con-select .vs-select {
+    width: 100%
+  }
+  @media (max-width: 550px) {
+    .con-select {
+      flex-direction: column;
+    }
+    .con-select .vs-select {
+      width: 100%
+    }
+  }
+
+  .vs-con-textarea {
+      color: gray;
+
+      h4 {
+          text-align: left;
+      }
+  }
+
+  .input-line {
+    background-color: transparent;
+    color: black;
+    font-size: 26px;
+    outline: none;
+    outline-style: none;
+    outline-offset: 0;
+    border: none;
+    border-bottom: solid #000000 1px;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-family: "Open Sans";
+  }
